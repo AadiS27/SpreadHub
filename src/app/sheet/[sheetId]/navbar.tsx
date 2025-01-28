@@ -15,7 +15,7 @@ import {
     MenubarSubTrigger,
     MenubarTrigger,
   } from "@/components/ui/menubar"
-import { FileIcon, FilePenIcon, FilePlus, Printer, TrashIcon } from "lucide-react";
+import { Clipboard, FileIcon, FilePenIcon, FilePlus, Printer, Redo2Icon, Scissors, TrashIcon, Undo2Icon } from "lucide-react";
 const Navbar = () => {
     
     return ( 
@@ -69,11 +69,49 @@ const Navbar = () => {
                             Edit
                         </MenubarTrigger>
                         <MenubarContent>
+                            <MenubarItem onClick={()=>console.log("Undo")}>
+                                <Undo2Icon className="size-4 mr-2"/>
+                                Undo
+                                <MenubarShortcut>Ctrl+Z</MenubarShortcut>
+                            </MenubarItem>
+                            <MenubarItem onClick={()=>console.log("Redo")}>
+                                <Redo2Icon className="size-4 mr-2"/>
+                                Redo
+                                <MenubarShortcut>Ctrl+Y</MenubarShortcut>
+                            </MenubarItem>
+                            <MenubarSeparator/>
+                            <MenubarItem>
+                            <MenubarItem>
+                                <Clipboard className="size-4 mr-2"/>
+                                Copy
+                            </MenubarItem>
+                               
+                            <MenubarItem>
+                                <Scissors className="size-4 mr-2"/>
+                                Cut
+                            </MenubarItem>
+                            <TrashIcon className="size-4 mr-2"/>
+                                Delete
+                            </MenubarItem>
                             
                         </MenubarContent>
                     </MenubarMenu>
-                   
-                    
+                   <MenubarMenu>
+                   <MenubarTrigger className="text-sm font-normal py-0.5 px-[7px] rounded-sm hover:bg-muted h-auto">
+                          View
+                        </MenubarTrigger>
+                   </MenubarMenu>
+                   <MenubarMenu>
+                   <MenubarTrigger className="text-sm font-normal py-0.5 px-[7px] rounded-sm hover:bg-muted h-auto">
+                         Insert
+                        </MenubarTrigger>
+                   </MenubarMenu>
+                   <MenubarMenu>
+                   <MenubarTrigger className="text-sm font-normal py-0.5 px-[7px] rounded-sm hover:bg-muted h-auto">
+                         Format
+                        </MenubarTrigger>
+                   </MenubarMenu>
+
                      </Menubar>
 
               </div>
