@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Horizontal bars -->
+  <rect x="20" y="45" width="60" height="10" fill="#db4437" /> <!-- Red -->
+  
+  <!-- Vertical bars -->
+  <rect x="45" y="20" width="10" height="60" fill="#4285f4" /> <!-- Blue -->
+  
+  <!-- Left bar -->
+  <rect x="20" y="45" width="25" height="10" fill="#f4b400" /> <!-- Yellow -->
+  
+  <!-- Bottom bar -->
+  <rect x="45" y="45" width="10" height="35" fill="#0f9d58" /> <!-- Green -->
+</svg>
