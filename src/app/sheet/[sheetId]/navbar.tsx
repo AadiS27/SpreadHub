@@ -80,7 +80,7 @@ const Navbar = () => {
                                 <MenubarShortcut>Ctrl+Y</MenubarShortcut>
                             </MenubarItem>
                             <MenubarSeparator/>
-                            <MenubarItem>
+                            
                             <MenubarItem>
                                 <Clipboard className="size-4 mr-2"/>
                                 Copy
@@ -90,6 +90,7 @@ const Navbar = () => {
                                 <Scissors className="size-4 mr-2"/>
                                 Cut
                             </MenubarItem>
+                            <MenubarItem>
                             <TrashIcon className="size-4 mr-2"/>
                                 Delete
                             </MenubarItem>
