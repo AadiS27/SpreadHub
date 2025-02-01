@@ -8,6 +8,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
+import Image from "next/image";
 
 const words = [
     {
@@ -30,57 +31,58 @@ const words = [
   ];
   export const projects = [
     {
-      title: "Aadi Singhal",
+      title : "Aadi Singhal",
       description:
-        "A technology company that builds economic infrastructure for the internet.",
+        "Frontend Developer and Product Manager",
+        
      
     },
     {
-      title: "Netflix",
+      title: "Mohd Anas",
       description:
-        "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
+        "SpreadSheet Engine Developer and Backend Developer",
      
     },
     {
-      title: "Google",
+      title: "Shreetej Meshram",
       description:
-        "A multinational technology company that specializes in Internet-related services and products.",
+        "SpreadSheet Engine Developer and Backend Developer",
       
     },
     {
-      title: "Meta",
+      title: "Hamza Khan",
       description:
-        "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
+        "Testing And UI/UX Designer",
       
     },
     {
-      title: "Amazon",
+      title: "Piyush Jain",
       description:
-        "A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.",
+        "SpreadSheet Engine Developer and Backend Developer",
      
     },
     {
-      title: "Microsoft",
+      title: "Sanchit Mittal",
       description:
-        "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
+        "UI/UX Designer",
     
     },
     {
-        title: "Microsoasdft",
+        title: "Anshul Gupta",
         description:
-          "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
+          "DevOps Engineer",
        
       },
       {
-        title: "Micasdrosoft",
+        title: "Nitin Kumar",
         description:
-          "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
+          "Authetication and Security",
         
       },
       {
-        title: "Microsoksdft",
+        title: "Harshpreeet Singh Sodhi",
         description:
-          "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
+          "DevOps Engineer",
       
       },
   ];
@@ -88,6 +90,7 @@ const words = [
 const Home = () => {
     return ( 
         <>
+        <div>
         <div className=" bg-slate-800 overflow-hidden flex flex-col relative min-h-screen items-center justify-center">
            <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
  
@@ -102,14 +105,42 @@ const Home = () => {
             <Boxes/>
            </div>
            </div>
-            <footer className="flex pl-0  bg-slate-500 ">
+           </div>
+           <div className=" bg-slate-800 overflow-hidden flex flex-col relative min-h-screen items-center justify-center"> 
+           <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
+            <div className="w-full flex flex-col gap-y-32">
+              <div 
+              className=" relative ml-[210px] z-50 flex   ">
+
+              <motion.img
+              initial={{ opacity: 0, x:-100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+               transition={{
+                delay: 0.3,
+                duration: 1.8,
+                ease: "easeInOut",
+              }}
+              alt="hero" src="/1.png" className="h-32 w-32" />
+             
+              <text className=" text-muted-foreground pl-28"><h1 className="text-2xl">Interactive UI</h1>
+              Maa Chudwa Lo bahut achi se chudwa lo  <br/>
+              mja aa jaega
+              </text>
+              
+              </div>
+              <div className="justify-end z-50 relative flex mr-[220px]">
+              <Image alt="hero" src="/vercel.svg" width={50} height={50} />
+              </div>
+            </div>
+           </div>
+            <div className="flex pl-0  bg-slate-500 ">
                 
                 <div className="flex  relative border-t-5  border-t-black   p-2 w-full">
                <div className="absolute inset-0 w-full h-full border-t-5  border-t-black bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
-               <LampContainer className="flex flex-col items-start pt-[200px] justify-start min-h-screen z-50">
+               <LampContainer className="flex flex-col items-start pt-[200px] justify-start h-[1024px]  z-50">
       <motion.h1
         initial={{ opacity: 0, y: 100 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: -100 }}
         transition={{
           delay: 0.3,
           duration: 1.8,
@@ -118,18 +149,18 @@ const Home = () => {
         }}
         className="mt-8 bg-gradient-to-br  from-white to-white py-4 bg-clip-text text-center  font-medium tracking-tight text-transparent md:text-7xl"
       >
-       <div className=" flex pt-[300px]" >
+       <div className=" flex pt-[300px] " >
         Contributor to  Project
            
             </div>
       </motion.h1>
-      <div className="flex relative  gap-x-4" >
+      <div className="flex relative  overflow-hidden" >
       <HoverEffect items={projects} />
             </div>
     </LampContainer>
             
             </div>
-            </footer>
+            </div>
             
         
         
