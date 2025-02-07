@@ -8,7 +8,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
-import Image from "next/image";
+
 import SequentialReveal from "./sequential";
 
 const words = [
@@ -98,7 +98,7 @@ const Home = () => {
                   <div className=" p-5 flex flex-col items-center justify-center gap-y-6 min-h-screen z-50 w-full ">
                     <TypewriterEffectSmooth words={words} className="z-50 " />
                    <Button size="lg" className="bg-green-600 border-3 border-b-4 border-b-green-700 active:border-b-0 z-50 hover:bg-green-700">
-                    <Link href="/dashboard" >
+                    <Link href="/hehe" >
                      Dashboard
                 
             </Link>
