@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
+
 
 const BoxesCore = () => {
   const numRows = 100; // Reduced to fit screen better
@@ -17,12 +17,15 @@ const BoxesCore = () => {
   };
 
   return (
+    <>
+ 
     <div
       className=
-        " absolute left-1/2 top-1/2 pt-[0rem] -translate-x-1/2 -translate-y-1/2 overflow-auto border  border-black bg-white shadow-lg max-h-full max-w-full"
+        " absolute left-1/2 top-1/2  pt-[135px] -translate-x-1/2 -translate-y-1/2 overflow-auto border  border-black bg-white shadow-lg max-h-full max-w-full"
    
     >
-      <div className="grid h-50" style={{ gridTemplateColumns: `50px repeat(${numCols}, 100px)` }}>
+     
+      <div className="grid h-50 pt-[3px]" style={{ gridTemplateColumns: `50px repeat(${numCols}, 100px)` }}>
         {/* Column Headers */}
         <div className="w-[50px] h-[40px] border border-gray-300 flex items-center justify-center bg-gray-200"></div>
         {Array.from({ length: numCols }).map((_, colIndex) => (
@@ -43,8 +46,8 @@ const BoxesCore = () => {
                 className="w-[100px] h-[40px] border border-gray-300 flex items-center justify-center text-sm text-gray-700 bg-white hover:bg-gray-100 focus:outline-none"
                 whileHover={{ scale: 1.02 }}
               >
+
                 <input
-                  type="text"
                   className="w-full h-full text-center outline-none bg-transparent"
                 />
               </motion.div>
@@ -53,6 +56,7 @@ const BoxesCore = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 

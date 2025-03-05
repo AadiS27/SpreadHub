@@ -1,14 +1,21 @@
-import Grid from "@/app/basic/page";
-import { Input } from "@/components/ui/input";
+'use client'
+
+import { useEditor, EditorContent } from '@tiptap/react'
+import StarterKit from '@tiptap/starter-kit'
+import Grid from "@/app/sheet/[sheetId]/Grid";
 
 const Editor = () => {
-    return ( 
+    const editor = useEditor({
+        extensions: [StarterKit],
+        content: <Grid />,
+    })
+
+    return (
         <div>
-              <Input placeholder="Pool A" className=" bg-white rounded-md h-[30px] w-full overflow-auto  print:hidden"/>
-           
-           <Grid />
-           </div>
-     );
+            
+      <Grid/>
+        </div>
+    )
 }
- 
-export default Editor;
+
+export default Editor

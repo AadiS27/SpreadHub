@@ -1,6 +1,7 @@
 'use client'
 
 import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 import { AlignCenterIcon, AlignJustifyIcon, AlignLeftIcon, AlignRightIcon, ArrowDown, BoldIcon, ItalicIcon, Link, Link2Icon, LucideIcon, MessageSquare, MessageSquarePlusIcon, Printer, Redo2Icon, Strikethrough, Underline, Undo2Icon } from "lucide-react";
@@ -156,6 +157,7 @@ export const Toolbar = () => {
         }
       ]]
     return (
+      <div className="flex flex-col gap-y-2">
         <div className="bg-[#f1f4f9] py-0.5 min-h-[0px] flex  gap-x-1 pl-3 overflow-x-auto rounded-full">
            {sections[0].map((item)=>(
             <ToolbarButton key={item.label}{...item}/>
@@ -173,6 +175,8 @@ export const Toolbar = () => {
             
         ))}
         <AlignButton/>
+        </div>
+        <Input placeholder="Pool A" className=" bg-white rounded-full h-[30px] w-full-screen overflow-auto print:hidden"/>
         </div>
       );
 }
