@@ -21,8 +21,8 @@ export const DocumentMenu = ({
     return(
         <DropdownMenu>  
             <DropdownMenuTrigger asChild>
-        <Button variant='ghost' size='icon' className="rounded-full">
-        <MoreVertical className="size-4"/>
+        <Button variant='ghost' size='icon' className="rounded-full hover:bg-[#f2f2f2] text-[#f2f2f2] hover:text-black transition duration-300">
+            <MoreVertical className="size-4"/>
         </Button>
         </DropdownMenuTrigger> 
         <DropdownMenuContent>

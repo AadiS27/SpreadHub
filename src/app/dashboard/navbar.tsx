@@ -11,16 +11,16 @@ export const Navbar=()=>{
             <Link href="/">
             <Image src="/logo.svg" alt="logo" width={36} height={36}/>
             </Link>
-            <h3 className="text-xl">Texo</h3>
+            <h3 className="text-xl text-orange-300">SpreadHub</h3>
            </div>
            <SearchInput/>
            <div className="flex gap-3 items-center pl-6">
         
             <OrganizationSwitcher
-            afterCreateOrganizationUrl='/'
-            afterLeaveOrganizationUrl="/"
-            afterSelectOrganizationUrl='/'
-            afterSelectPersonalUrl='/' />
+            afterCreateOrganizationUrl='/dashboard'
+            afterLeaveOrganizationUrl="/dashboard"
+            afterSelectOrganizationUrl='/dashboard'
+            afterSelectPersonalUrl='/dashboard' />
            <UserButton/>
            </div>
         </nav>

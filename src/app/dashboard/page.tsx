@@ -1,12 +1,12 @@
 'use client'
 import { usePaginatedQuery } from "convex/react";
-import { Navbar } from "../dashboard/navbar";
-import { TemplateGallery } from "../dashboard/template-gallery";
+import { Navbar } from "./navbar";
+import { TemplateGallery } from "./template-gallery";
 import { api } from "../../../convex/_generated/api";
-import { DocumentTable } from "../dashboard/documents-table";
+import { DocumentTable } from "./documents-table";
 import { useSearchParam } from "@/hooks/use-search-param";
 
-const Dashboard = () => {
+const Home = () => {
   const [search]=useSearchParam('search');
   const {
     results,
@@ -16,10 +16,10 @@ const Dashboard = () => {
   
   return ( 
     <div className="flex flex-col min-h-screen">
-      <div className="p-4 fixed top-0 left-0 left-0 right-0 z-10 h-16 bg-white">
+      <div className="p-4 fixed top-0  left-0 right-0 z-10 h-16 bg-[#1f1f1f] text-[#f2f2f2]">
         <Navbar/>
       </div>
-      <div className="mt-16">
+      <div className="mt-16 bg-[#1f1f1f]">
       <TemplateGallery/>
       <DocumentTable
       documents={results}
@@ -31,4 +31,4 @@ const Dashboard = () => {
   );
 }
  
-export default Dashboard;
+export default Home;

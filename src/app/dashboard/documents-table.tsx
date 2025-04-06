@@ -23,7 +23,7 @@ loadMore,
 status
 }:DocumentTableProps)=>{
     return(
-        <div className="max-w-screen-xl mx-auto px-16 py-6 flex flex-col">
+        <div className="max-w-screen-xl mx-auto px-16 py-6 flex flex-col ">
            {documents===undefined?(
             <div className="flex justify-center items-center h-24">
                 <LoaderIcon className="animate-spin text-muted-foregroung size-5"/>
@@ -32,10 +32,10 @@ status
             <Table>
                 <TableHeader>
                     <TableRow className="hover:bg-transparent border-none">
-                        <TableHead>Name</TableHead>
+                        <TableHead className=" text-[#f2f2f2]">Name</TableHead>
                         <TableHead>&nbsp;</TableHead>
-                        <TableHead className="hidden md:table-cell">Shared</TableHead>
-                        <TableHead className="hidden md:table-cell">Created at</TableHead>
+                        <TableHead className="hidden md:table-cell  text-[#f2f2f2]">Shared</TableHead>
+                        <TableHead className="hidden md:table-cell  text-[#f2f2f2]">Created at</TableHead>
 
                     </TableRow>
                 </TableHeader>
@@ -56,7 +56,7 @@ status
                 )}
             </Table>
            )}
-           <div className="flex items-center justify-center">
+           <div className="flex items-center justify-center  text-[#f2f2f2]">
             <Button variant='ghost' size='sm' onClick={()=>loadMore(5)} disabled={status!=="CanLoadMore"}>
             {status==="CanLoadMore"?"Load More":"End of Results"}
             </Button>

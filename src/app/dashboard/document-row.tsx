@@ -1,6 +1,6 @@
 import { TableCell, TableRow } from "@/components/ui/table";
 import { Doc } from "../../../convex/_generated/dataModel";
-import {SiGoogledocs} from 'react-icons/si';
+import {SiGooglesheets} from 'react-icons/si';
 import { Building2Icon, CircleUserIcon } from "lucide-react";
 import {format} from 'date-fns';
 import { DocumentMenu } from "./document-menu";
@@ -24,20 +24,20 @@ const onRowClick=(id:string)=>{
         onClick={()=>onRowClick(document._id)}
         className="cursor-pointer">
             <TableCell className="w-[50px]">
-                <SiGoogledocs className="size-6 fill-blue-500"/>
+                <SiGooglesheets className="size-6 fill-orange-300"/>
             </TableCell>
-            <TableCell className="font-medium md:w-[45%]">
+            <TableCell className="font-medium text-[#f2f2f2] md:w-[45%]">
                 {document.title}
             </TableCell>
-            <TableCell className="text-muted-foreground hidden md:flex items-center gap-2">
+            <TableCell className="text-[#f2f2f2] hidden md:flex items-center gap-2">
                 {document.organizationId?<Building2Icon className="size-4"/>:<CircleUserIcon className="size-4 "/>}
                 {document.organizationId?"Shared":"Private"}
 
             </TableCell>
-            <TableCell className="text-muted-foreground hidden md:table-cell">
+            <TableCell className="text-[#f2f2f2] md:table-cell">
             {format(new Date(document._creationTime),"MMM dd, yyyy")}
             </TableCell>
-            <TableCell className="flex  justify-end">
+            <TableCell className="flex justify-end">
                 <DocumentMenu
                 documentId={document._id}
                 title={document.title}
