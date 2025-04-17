@@ -613,14 +613,14 @@ export const Toolbar = () => {
         <TextColorButton/>
         <HighlightColorButton/>
         <Separator orientation="vertical" className="h-6 bg-neutral-300"/>
-        <LinkButton/>
+        {/* <LinkButton/>
         <ImageButton/>
         <AlignButton />
         <LineHeightButton/>
-        <ListButton/>
-        {sections[2].map((item)=>(
+        <ListButton/> */}
+        {/* {sections[2].map((item)=>(
             <ToolbarButton key={item.label}{...item}/>
-        ))}
+        ))} */}
         </div>
     )
 }
