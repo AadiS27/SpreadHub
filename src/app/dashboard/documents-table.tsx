@@ -42,7 +42,7 @@ status
                 {documents.length===0?(
                     <TableBody>
                         <TableRow className="hover:bg-transparent">
-                            <TableCell colSpan={4} className="h-24 text-center text-muted-foregroung">
+                            <TableCell colSpan={4} className="h-24 text-center text-[#f2f2f2]">
                                 No documents found
                             </TableCell>
                         </TableRow>

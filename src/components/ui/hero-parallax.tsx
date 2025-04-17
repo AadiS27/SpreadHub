@@ -10,6 +10,7 @@ import {
 import Image from "next/image";
 import { Button } from "./button";
 import { useRouter } from "next/navigation";
+import { ArrowRight } from "lucide-react";
 
 export const HeroParallax = ({
   products,
@@ -252,7 +253,7 @@ export default function AIApplicationSection() {
           {/* Text Section */}
           <div className="max-w-2xl">
             <h2 className="text-4xl font-bold text-white">{feature.title}</h2>
-            <ul className="mt-4 space-y-4 text-gray-400">
+            <ul className="mt-4 space-y-4 text-gray-400 text-justify">
               {feature.description.map((point, i) => (
                 <li key={i}>
                   <strong className="text-white">{point.main}</strong>{" "}
@@ -260,13 +261,13 @@ export default function AIApplicationSection() {
                 </li>
               ))}
             </ul>
-            <button className="mt-6 px-6 py-3 bg-white text-black font-semibold rounded-lg hover:bg-gray-300 transition">
-              Learn More
+            <button className="mt-6 px-6 py-3 bg-black/25 text-gray-400 font-semibold rounded-lg hover:bg-[#2f2f2f] border border-gray-600 transition">
+              Learn More<ArrowRight className="inline ml-2 size-4" />
             </button>
           </div>
 
           {/* Image Section */}
-          <div className="relative mt-10 lg:mt-0">
+          <div className="relative mt-10 ml-20 lg:mt-0">
             <img
               src={feature.image}
               alt={feature.title}

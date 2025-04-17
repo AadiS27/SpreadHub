@@ -90,7 +90,7 @@ export const Navbar = ({data}:NavbarProps) => {
     return (
         <nav className="flex items-center justify-between">
             <div className="flex gap-2 items-center">
-                <Link href="/">
+                <Link href="/dashboard">
             <Image src="/logo.svg" alt="Logo" width={36} height={36} />
             </Link>
             <div className="flex flex-col">

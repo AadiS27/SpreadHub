@@ -1,7 +1,7 @@
 export const templates=[
     {
      id:'blank',
-     label:'Blank Document',
+     label:'Blank Sheet',
      imageUrl:"/blank-document.svg",
      initialContent:" "
     },

@@ -15,9 +15,9 @@ const DocumentIdPage =  async ({params}:DocumentIdProps) => {
     const documentId= awaitedparams.documentId;
     const {getToken}=await auth();
     const token=await getToken({template:'convex'})??undefined;
-    if(!token){
-        throw new Error("Token not found");
-    }
+    // if(!token){
+    //     throw new Error("Token not found");
+    // }
 
     const Preloadeddocument=await preloadQuery(
         api.documents.getById,
