@@ -185,59 +185,66 @@ export const ProductCard = ({
   );
 };
 
+import Link from "next/link";
+
+
 export default function AIApplicationSection() {
   const features = [
     {
+      id: "1", // Add ID for the feature
       title: "Conflict Resolution for Enhanced Control",
       description: [
         {
           main: "Mitigating Data Loss:",
-          sub: "Traditional spreadsheets permit concurrent edits without robust conflict resolution, increasing the risk of unintended data overwrites. Implementing an author approval mechanism ensures that conflicting changes are reviewed before finalization, thereby preserving data integrity."
+          sub: "Traditional spreadsheets permit concurrent edits without robust conflict resolution, increasing the risk of unintended data overwrites. Implementing an author approval mechanism ensures that conflicting changes are reviewed before finalization, thereby preserving data integrity.",
         }
       ],
-      image: "/image1.png"
+      image: "/image1.png",
     },
     {
+      id: "2", // Add ID for the feature
       title: "Version Control for Greater Accountability",
       description: [
         {
           main: "• Comprehensive Change Tracking:",
-          sub: "Every modification is recorded in a structured commit system, allowing users to track edits with full transparency."
+          sub: "Every modification is recorded in a structured commit system, allowing users to track edits with full transparency.",
         },
         {
           main: "• Facilitates Rollbacks & Audit Trails:",
-          sub: "Essential for teams managing critical datasets, enabling precise error identification and resolution."
+          sub: "Essential for teams managing critical datasets, enabling precise error identification and resolution.",
         },
         {
           main: "Minimizing Spreadsheet Errors:",
-          sub: "Studies indicate that 88% to 94% of business spreadsheets contain errors. Implementing structured version control significantly enhances data accuracy and reliability."
+          sub: "Studies indicate that 88% to 94% of business spreadsheets contain errors. Implementing structured version control significantly enhances data accuracy and reliability.",
         }
       ],
-      image: "/image2.png"
+      image: "/image2.png",
     },
     {
+      id: "3", // Add ID for the feature
       title: "Optimized for Multi-User Collaboration",
       description: [
         {
           main: "• Ensuring Accuracy Before Merging:",
-          sub: "In fields such as finance, legal documentation, and software planning—where accuracy is paramount—our system verifies changes before integration."
+          sub: "In fields such as finance, legal documentation, and software planning—where accuracy is paramount—our system verifies changes before integration.",
         },
         {
           main: "Addressing High-Stakes Spreadsheet Risks:",
-          sub: "Spreadsheet inaccuracies have resulted in substantial financial losses. Notably, JPMorgan Chase suffered a $6 billion trading loss in 2012 due in part to spreadsheet errors."
+          sub: "Spreadsheet inaccuracies have resulted in substantial financial losses. Notably, JPMorgan Chase suffered a $6 billion trading loss in 2012 due in part to spreadsheet errors.",
         }
       ],
-      image: "/image3.png"
+      image: "/image3.png",
     },
     {
+      id: "4", // Add ID for the feature
       title: "Flexible Data Handling for Organizational Needs",
       description: [
         {
           main: "Adaptive Hierarchical Customization:",
-          sub: "Traditional spreadsheets lack the flexibility to enforce role-based editing priorities. Our system allows organizations to implement custom merge strategies, ensuring that high-level approvals align with operational workflows."
+          sub: "Traditional spreadsheets lack the flexibility to enforce role-based editing priorities. Our system allows organizations to implement custom merge strategies, ensuring that high-level approvals align with operational workflows.",
         }
       ],
-      image: "/image4.png"
+      image: "/image4.png",
     }
   ];
 
@@ -261,9 +268,11 @@ export default function AIApplicationSection() {
                 </li>
               ))}
             </ul>
-            <button className="mt-6 px-6 py-3 bg-black/25 text-gray-400 font-semibold rounded-lg hover:bg-[#2f2f2f] border border-gray-600 transition">
-              Learn More<ArrowRight className="inline ml-2 size-4" />
-            </button>
+            <Link href={`/blog/${feature.id}`}>
+              <button className="mt-6 px-6 py-3 bg-black/25 text-gray-400 font-semibold rounded-lg hover:bg-[#2f2f2f] border border-gray-600 transition">
+                Learn More<ArrowRight className="inline ml-2 size-4" />
+              </button>
+            </Link>
           </div>
 
           {/* Image Section */}
@@ -279,3 +288,4 @@ export default function AIApplicationSection() {
     </div>
   );
 }
+
